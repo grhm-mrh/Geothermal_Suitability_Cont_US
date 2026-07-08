@@ -5,7 +5,7 @@
 *   **The Idea:** To build an automated, AI-driven Multi-Criteria Decision Analysis (MCDA) model to identify highly viable geothermal drilling sites. The score relies on subsurface heat (Temperature-at-Depth), natural permeability (Distance to Quaternary Faults), thermal sources (Distance to Active Volcanoes), and legal viability (Protected Lands exclusion).
 *   **The Challenge:** High-resolution national temperature data was taken offline. The only available data were legacy, flat JPEG maps with heavy JPEG compression, anti-aliasing artifacts, and obscuring text/logos. 
 
-**Phase 2: Data Rescue & Rectification**
+**Phase 2: Data Cleaning**
 1.  **Georeferencing & Projection:** Imported the legacy SMU Geothermal JPEG. Discovered a projection mismatch (Conic map on a WGS84 flat grid). Corrected the workspace and reprojected to **EPSG:5070 (NAD83 / Conus Albers)** to guarantee mathematically accurate Euclidean distance calculations in meters.
 2.  **The Bounding Box Fix:** Created a "Single parts" polygon mask of just the Lower 48 states. Clipped the raw map using this mask while explicitly setting the NoData value to `0`, successfully stripping away the oceans, Canada, and the mathematical bounding box trap.
 
