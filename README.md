@@ -5,7 +5,7 @@ To identify highly viable geothermal target zones across the contiguous United S
 
 ## 🛠️ The Spatial Data Engineering Workflow
 
-This project required a complete "Data Rescue" pipeline—reverse-engineering a heavily compressed, un-legend-matched JPEG image into a queryable, scientifically continuous geospatial database.
+This project required a complete data cleaning pipeline—reverse-engineering a heavily compressed, un-legend-matched JPEG image into a queryable, scientifically continuous geospatial database.
 
 ### Phase 1: Spatial Rectification & The Bounding Box Fix
 *   **Georeferencing:** Imported a legacy SMU Geothermal JPEG. Corrected a projection mismatch by reprojecting the workspace to **EPSG:5070 (NAD83 / Conus Albers)** to guarantee mathematically accurate Euclidean distance calculations in meters.
